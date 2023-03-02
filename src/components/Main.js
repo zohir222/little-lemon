@@ -176,7 +176,7 @@ const Testimonials = ()=>{
 const About = ()=>{
 
     return(
-        <section className="About">
+        <section id="About">
           <div className='AboutText'>
                 <header style={myStyle(uiKit.Title , "black")}>Little Lemon </header>
                 <h2 style={myStyle(uiKit.subTitle , "black")   } >Chicago</h2>
@@ -194,7 +194,7 @@ const About = ()=>{
 function Main(){
 
     return (
-        <div className="Main">
+        <div id ="Main">
             <Herosection/>
             <HighLight/>
             <Testimonials/>

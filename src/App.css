@@ -141,7 +141,7 @@ border-radius: 16px;
     grid-column: 2 / span 1;
     display: flex;
 }
-.About {
+#About {
    
     padding: 2rem 10%;
     display: flex;
