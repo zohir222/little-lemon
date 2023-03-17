@@ -14,8 +14,19 @@
     box-sizing: border-box;
 }
 /****************Body layout****************/
-.Header , .Nav , .Footer {
+
+#root {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+#Main {
+    flex-grow: 1;
+}
+.Nav , .Footer {
     padding: 0% 10%;
+    
 } 
 /****************Nav*****************************/
  .Nav>ul , .Footer>ul {
@@ -25,8 +36,14 @@
  .Footer>ul>li , .Nav>ul>li {
     flex-grow: 1;
     text-align: left;
-
+   
  }
+
+a:hover{
+    color:rgba(20, 22, 21, 0.986);
+    text-shadow: 0.1rem 0.2rem 0.2rem ;
+}
+
 
 .Nav li {
     padding: 2rem 0 ;
@@ -39,7 +56,11 @@
 
 .Footer{
     background-color: #F4CE14;
-    padding-top: 1rem;
+    padding-top: 1rem ;
+    padding-bottom: 1rem;   
+}
+#Main {
+    flex-grow: 1;
 }
 a:link{
     color: #333333;

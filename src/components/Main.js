@@ -91,7 +91,7 @@ const StarColor = ({children  , rating })=>{
   
     return (
         <>
-            { React.Children.map (children , (child , index )=> { return React.cloneElement ( child ,  { dd : { dd : (rating > index) ?  YellowStar : WhiteStar } }  ) }  ) }
+            { React.Children.map (children , (child , index )=> { return React.cloneElement ( child ,  {  dd : (rating > index) ?  YellowStar : WhiteStar  }  ) }  ) }
         </>
     );
   
@@ -101,7 +101,7 @@ const Star = (props)=>{
    
     return (
        <span>   
-        <img  style = {{width : "1rem"} } src = {props.dd.dd}></img> 
+        <img  style = {{width : "1rem"} } src = {props.dd}></img> 
        </span>
    
     );
@@ -194,12 +194,12 @@ const About = ()=>{
 function Main(){
 
     return (
-        <div id ="Main">
+        <main id ="Main">
             <Herosection/>
             <HighLight/>
             <Testimonials/>
             <About/>
-        </div>
+        </main>
     );
 }
 
