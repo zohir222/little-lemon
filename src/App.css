@@ -175,8 +175,6 @@ border-radius: 16px;
 }
 .AboutImag {
     flex-grow: 1;
-    
-    
     display: flex;
     flex-wrap: wrap;
 }
@@ -189,3 +187,6 @@ border-radius: 16px;
     border-radius: 16px;
     border: #333333 2px solid;
 }
+table, th, td {
+    border:1px solid black;
+  }

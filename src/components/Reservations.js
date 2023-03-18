@@ -1,50 +1,9 @@
 import React, { useEffect, useReducer, useState } from "react";
-import { fetchAPI , submitAPI } from "./koko";
-import { createContext, useContext} from "react";
+import { fetchAPI , submitAPI } from "./API";
+import {myStyle , uiKit} from './style';
 
 
-const submitContext = createContext(Object);
 
-const SubmitProvider = ({ children }) => {
-  
-  const [ submited , setSubmitted ] = useState ({ submitted :  false , });   
-
-  return (
-    <submitContext.Provider
-      value={{
-     ...submited ,
-        toogleSubmit : ()=> {
-                            if (submited.submitted === true )  { 
-                                setSubmitted( {...submited , submitted : false}  )  }
-                             else {
-                                setSubmitted ({...submited , submitted : true})
-                                }
-                                
-                           }
-      }}
-    >
-      {children}
-    </submitContext.Provider>
-  );
-};
-
-const useSubmit = () => useContext(submitContext);
-
-/******************************************** */
-
-function ConfirmedBooking (){
-
-    const {toogleSubmit} = useSubmit();
-
-
-    return (
-        <div style={{display : "flex" , justifyContent : "center" , flexFlow : "column"}} >
-            <h1>Booked succefully</h1>
-            <button onClick={toogleSubmit} > return </button>
-           
-        </div>
-    )
-}
 
 const BookingForm = ({availableTimes , dispatch })=>{
 
@@ -53,21 +12,30 @@ const BookingForm = ({availableTimes , dispatch })=>{
     const [nbrGust , setNbrGuest] = useState ("");
     const [occasion , setOccasion] = useState ("");    
      
-    // const [ submited , setSubmitted ] = useState (false );
+     const [ submited , setSubmitted ] = useState (false );
 
-    const {toogleSubmit , submitted } = useSubmit();
+    // const {toogleSubmit , submitted } = useSubmit();
 
     const handleSubmit = (e )=>{
         
         e.preventDefault() ;
         console.log(date ,  time , nbrGust , occasion );
         dispatch(time);
-        toogleSubmit ;
+        setSubmitted(true)
+        console.log(submitForm (date , time , nbrGust , occasion , submited ));
     }
 
-    const submitForm = (date , time , nbrGust , occasion  )=>{
+    const handleReturn = ()=>{
+        setSubmitted(false) ;
+        setDate("");
+        setTime("");
+        setNbrGuest("");
+        setOccasion("");
+    }
 
-        if (date !== "" && time !== "" && nbrGust !== "" && occasion !== "" ) {
+    const submitForm = (date , time , nbrGust , occasion , submited )=>{
+
+        if (date !== "" && time !== "" && nbrGust !== "" && occasion !== "" && submited == true ) {
             return  submitAPI(date  , time , nbrGust , occasion)
         }
        
@@ -76,10 +44,10 @@ const BookingForm = ({availableTimes , dispatch })=>{
     }
    
     return (
-        <div style={{display : "flex" , justifyContent : "center"}}>
+        <div style={{...myStyle(uiKit.sectionCategory , "black") , display : "flex" , justifyContent : "center" , flexFlow : "column" , alignItems : "center" , gap : "2rem"}}>
             
-            <SubmitProvider>
-           { ! (submitForm (date , time , nbrGust , occasion ) && submitted) && <form style={{display: "grid" , maxWidth: "200px" , gap: "20px" }} onSubmit = {handleSubmit} >
+            
+           {  ! submitForm (date , time , nbrGust , occasion , submited )  && <form style={{display: "grid" , maxWidth: "200px" , gap: "20px" }} onSubmit = {handleSubmit} >
 
                 <label htmlFor = "res-date">Choose date</label>
                 <input type="date" id="res-date" value={date} onChange = {(e)=> setDate(e.target.value)} name = "reservation date" />
@@ -101,12 +69,30 @@ const BookingForm = ({availableTimes , dispatch })=>{
 
                </br>
                 
-                <button id ="addOne" type="submit" name="submite button" >Make Your reservation</button>
+                <button disabled = {date == "" || time == "" || nbrGust == "" || occasion == ""} id ="addOne" type="submit" name="submite button" >Make Your reservation</button>
              
             </form>}
-            { submitForm (date , time , nbrGust , occasion ) && submitted && <ConfirmedBooking/> }
-            </SubmitProvider>
-   
+            { submitForm (date , time , nbrGust , occasion , submited ) && <div style={{display : "flex" , flexFlow : "column"}} >
+                                                                          <h1>Submited succefully</h1>
+                                                                          <button onClick={handleReturn} style={{margin : "2rem"}} >return </button>
+                                                                          </div> }
+            
+            <table style={{margin : "2rem"}} >
+                <tr>
+                    <th>Reservation Date</th>
+                    <th>time of Reservation</th>
+                    <th>nubmer of guests</th>
+                    <th>Occasion</th>
+                </tr>
+                <tr>
+                    <td>{date}</td>
+                    <td>{time}</td>
+                    <td> {nbrGust} </td>
+                    <td> {occasion} </td>
+                </tr>
+                
+           </table>
+            
         </div>
     );
 }

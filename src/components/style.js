@@ -1,42 +1,9 @@
-// import { createContext, useContext, useState } from "react";
+export const uiKit = {
+    Title : "Title" , subTitle : "subTitle" , leadText : "leadText" , sectioTitle : "sectioTitle", sectionCategory : "sectionCategory",
+    cardtitle : "cardtitle" , cardText : "cardText" , highLightCardText : "highLightCardText"
+}
 
-
-// const ThemeContext = createContext(Object);
-
-// const ThemeProvider = ({ children }) => {
-//   const [style , setStyle] = useState( {  } );
-
-//   return (
-//     <ThemeContext.Provider
-//       value={{
-//         ... style ,
-//         toggleTheme: () => { if (theme.th === "b" )  { 
-//                             setTheme( {...theme ,  th: "g" } )  }
-//                              else {
-//                               setTheme ({ ...theme , th : "b" })
-//                                 }
-                                
-//                            } ,
-//         toogledeletee : ()=> {
-//                             if (theme.koko === true )  { 
-//                             setTheme( { ...theme , koko : false} )  }
-//                              else {
-//                               setTheme ({...theme , koko : true})
-//                                 }
-//                                 console.log(theme.koko); 
-//                            }
-//       }}
-//     >
-//       {children}
-//     </ThemeContext.Provider>
-//   );
-// };
-// const useTheme = () => useContext(ThemeContext);
-
-
-
-
-function myStyle (style , color ){
+export function myStyle (style , color ){
     
 
     let styleHolder = {} ;
@@ -167,4 +134,3 @@ function myStyle (style , color ){
     return {...styleHolder , ...colorHolder} ;
 }
 
-export default myStyle ;

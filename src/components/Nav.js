@@ -3,7 +3,7 @@ import Reservations from './Reservations';
 import Order from './Order';
 import Login from './Login';
 import Logo from '../assets/Logo.svg' ;
-import myStyle from './style';
+import{ myStyle }from './style';
 import Main from './Main';
 import { Routes , Route , Link } from "react-router-dom";
 

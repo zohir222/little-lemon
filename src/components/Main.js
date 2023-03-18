@@ -12,13 +12,10 @@ import person4 from '../assets/person4.png';
 import marioAdrianA from '../assets/MarioandAdrianA.jpg'
 import marioAdrianB from '../assets/MarioandAdrianB.jpg'
 
-import myStyle from './style';
+import {myStyle , uiKit } from './style';
 import * as React from 'react' ;
 
-const uiKit = {
-    Title : "Title" , subTitle : "subTitle" , leadText : "leadText" , sectioTitle : "sectioTitle", sectionCategory : "sectionCategory",
-    cardtitle : "cardtitle" , cardText : "cardText" , highLightCardText : "highLightCardText"
-}
+
 
 
 const Herosection = ()=>{
