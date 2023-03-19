@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, {  useReducer, useState } from "react";
 import { fetchAPI, submitAPI } from "./API";
 import { myStyle, uiKit } from './style';
 
@@ -14,7 +14,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
     const [submited, setSubmitted] = useState(false);
     const [trigerError, setTrigerError] = useState(false);
 
-    const BtnisDisabled = date == "" || time == "" || nbrGust == "" || occasion == "";
+    const BtnisDisabled = date === "" || time === "" || nbrGust === "" || occasion === "";
    
     var GivenDate = new Date(date);
 
@@ -50,7 +50,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
 
     const submitForm = (date, time, nbrGust, occasion, submited) => {
 
-        if (date !== "" && time !== "" && nbrGust !== "" && occasion !== "" && submited == true) {
+        if (date !== "" && time !== "" && nbrGust !== "" && occasion !== "" && submited === true) {
             return submitAPI(date, time, nbrGust, occasion)
         }
 
@@ -84,7 +84,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
                     <option value={"Birthday"} >Birthday</option>
                     <option value={"Anniversary"} >Anniversary</option>
                 </select>
-                {trigerError && occasion == "choose one" ? <p data-testid = "occasionError" style={{ color: "red" }}>choose valide occasion </p> : null}
+                {trigerError && occasion === "choose one" ? <p data-testid = "occasionError" style={{ color: "red" }}>choose valide occasion </p> : null}
                 <br>
 
                 </br>

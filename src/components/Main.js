@@ -28,7 +28,7 @@ const Herosection = ()=>{
               <button style={{ marginTop : "2rem"}} >Reserve a Table</button>
             </div>
             
-            <img src={restorantFood} ></img>
+            <img src={restorantFood} alt = "heroImage"></img>
             
         </div>
         
@@ -98,7 +98,7 @@ const Star = (props)=>{
    
     return (
        <span>   
-        <img  style = {{width : "1rem"} } src = {props.dd}></img> 
+        <img  style = {{width : "1rem"} } src = {props.dd} alt = "starsRating"></img> 
        </span>
    
     );
@@ -156,7 +156,7 @@ const Testimonials = ()=>{
                 <div className='stars'>
                  <StarPinting nbr = {item.rating} />
                 </div>
-                <img src = {item.image} ></img>
+                <img src = {item.image} alt = "rating person" ></img>
                 <p style={myStyle(uiKit.cardtitle , "black")} >{item.namee} </p>
                 <p style={myStyle(uiKit.leadText , "black")} >{item.text}</p>
             </article>
