@@ -1,10 +1,11 @@
 import Logo2 from '../assets/Asset 18@4x.png'
+import {myStyle , uiKit } from './style';
 
 function Footer () {
 
     return (
         <footer className="Footer">
-            <ul >
+            <ul style={myStyle(uiKit.leadText , "black")} >
                 <li ><img src={Logo2} alt = 'logo' ></img></li>
                 <li>
                     <ul className="footer_nav">
