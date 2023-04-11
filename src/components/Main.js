@@ -24,7 +24,7 @@ const Herosection = ()=>{
             <div className="Herosection">
               <h1 style={myStyle(uiKit.Title , "yellow") } >Little lemon</h1>
               <h2 style={myStyle(uiKit.subTitle , "white")   } >Chicago</h2>
-              <p style={{...myStyle(uiKit.leadText , "white") , paddingTop : "3rem" ,paddingBottom : "2rem" }} >We are family owned mediterranean restaurant , focused on traditional recipes served with modern twist .</p>
+              <p style={{...myStyle(uiKit.leadText , "white") , paddingTop : "3rem" ,paddingBottom : "2rem" }} >We are family owned mediterranean restaurant , focused on traditional recipes served with modern twist wow .</p>
               <button style={{ marginTop : "2rem"}} >Reserve a Table</button>
             </div>
             
