@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/little-lemon/static/css/main.0606d9fe.css",
+    "main.js": "/little-lemon/static/js/main.c4d0a89b.js",
+    "static/js/787.a2f6b77c.chunk.js": "/little-lemon/static/js/787.a2f6b77c.chunk.js",
+    "static/media/MarioandAdrianA.jpg": "/little-lemon/static/media/MarioandAdrianA.7f44c6d6e341a27d14b3.jpg",
+    "static/media/MarioandAdrianB.jpg": "/little-lemon/static/media/MarioandAdrianB.6ba0e06bfa9c1ea75109.jpg",
+    "static/media/bruchetta.svg": "/little-lemon/static/media/bruchetta.29ea078fea3d3120ed22402e901b5bbc.svg",
+    "static/media/greekSalad.jpg": "/little-lemon/static/media/greekSalad.bed423a1fab5b210e347.jpg",
+    "static/media/restauranfood.jpg": "/little-lemon/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
+    "static/media/MarkaziText-VariableFont_wght.ttf": "/little-lemon/static/media/MarkaziText-VariableFont_wght.ab5c6a62488a17ed6c60.ttf",
+    "static/media/Asset 18@4x.png": "/little-lemon/static/media/Asset 18@4x.215df87837073a73cb27.png",
+    "static/media/Karla-VariableFont_wght.ttf": "/little-lemon/static/media/Karla-VariableFont_wght.e7cdc609f35daffcb788.ttf",
+    "static/media/Logo.svg": "/little-lemon/static/media/Logo.6c132dfefa69396bba43f72aa595e62f.svg",
+    "static/media/person2.png": "/little-lemon/static/media/person2.f9001330dab1abf066e1.png",
+    "static/media/person4.png": "/little-lemon/static/media/person4.da209d002f37e9ea112e.png",
+    "static/media/person1.png": "/little-lemon/static/media/person1.f41e633bbe9549aae06f.png",
+    "static/media/person3.png": "/little-lemon/static/media/person3.89d113292e6ea1266b55.png",
+    "static/media/yellowStaricon.png": "/little-lemon/static/media/yellowStaricon.5b8e8e917dd9cbd87217.png",
+    "static/media/bicycle.svg": "/little-lemon/static/media/bicycle.48342b9d98d8944a81743b82259a7cf0.svg",
+    "static/media/whiteStarIcon.png": "/little-lemon/static/media/whiteStarIcon.b429bd44f4de281f8ee2.png",
+    "index.html": "/little-lemon/index.html",
+    "main.0606d9fe.css.map": "/little-lemon/static/css/main.0606d9fe.css.map",
+    "main.c4d0a89b.js.map": "/little-lemon/static/js/main.c4d0a89b.js.map",
+    "787.a2f6b77c.chunk.js.map": "/little-lemon/static/js/787.a2f6b77c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0606d9fe.css",
+    "static/js/main.c4d0a89b.js"
+  ]
+}
